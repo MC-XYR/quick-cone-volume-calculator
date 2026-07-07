@@ -1,15 +1,66 @@
-//TIP 要<b>运行</b>代码，请按 <shortcut actionId="Run"/> 或
-// 点击装订区域中的 <icon src="AllIcons.Actions.Execute"/> 图标。
+//练手，好久没碰java了awa，用这个程序算一次就结束了。
+//圆锥体积计算公式：r²π×h÷3，也就是半径的平方×圆周率×高÷3，公式中的3也可以写成1/3（三分之一）。
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP 当文本光标位于高亮显示的文本处时按 <shortcut actionId="ShowIntentionActions"/>
-        // 查看 IntelliJ IDEA 建议如何修正。
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP 按 <shortcut actionId="Debug"/> 开始调试代码。我们已经设置了一个 <icon src="AllIcons.Debugger.Db_set_breakpoint"/> 断点
-            // 但您始终可以通过按 <shortcut actionId="ToggleLineBreakpoint"/> 添加更多断点。
-            System.out.println("i = " + i);
+        Scanner scanner = new Scanner(System.in);
+        String lang = "";
+        System.out.println("请选择语言 / Please select language: ZH or EN");
+        if (scanner.hasNext()) {
+            lang = scanner.next();
         }
+        boolean isChinese = lang.equalsIgnoreCase("ZH");
+        double r = 0.0;
+        if (isChinese) {
+            System.out.println("请输入圆锥底面半径：");
+        } else {
+            System.out.println("Please enter the base radius of the cone:");
+        }
+        if (scanner.hasNext()) {
+            String r1 = scanner.next();
+            r = Double.parseDouble(r1);
+        }
+
+        if (isChinese) {
+            System.out.println("半径是" + r);
+        } else {
+            System.out.println("Radius is " + r);
+        }
+        double h = 0.0;
+        if (isChinese) {
+            System.out.println("请输入圆锥的高：");
+        } else {
+            System.out.println("Please enter the height of the cone:");
+        }
+        if (scanner.hasNext()) {
+            String h1 = scanner.next();
+            h = Double.parseDouble(h1);
+        }
+
+        if (isChinese) {
+            System.out.println("高是：" + h);
+        } else {
+            System.out.println("Height is: " + h);
+        }
+        double p1 = r * r * h / 3.0;
+        if (isChinese) {
+            System.out.println("圆锥的体积是（保留π）：" + p1 + "π");
+        } else {
+            System.out.println("The volume of the cone is (keeping π): " + p1 + "π");
+        }
+        double p2 = r * r * 3.14 * h / 3.0;
+        if (isChinese) {
+            System.out.println("圆锥的体积是（π取3.14）：" + p2);
+        } else {
+            System.out.println("The volume of the cone is (π as 3.14): " + p2);
+        }
+        double p3 = r * r * 3.1415926535897932384626433 * h / 3.0;
+        if (isChinese) {
+            System.out.println("圆锥的体积是（π取小数点后25位）：" + p3);
+        } else {
+            System.out.println("The volume of the cone is (π to 25 decimal places): " + p3);
+        }
+        scanner.close();
     }
 }
