@@ -40,3 +40,6 @@ Chinese:
 java -jar quick-cone-volume-calculator.jar
 pause
 ```
+
+## 开源协议
+本项目采用 MIT开源协议 详细信息请参阅 [LICENSE](LICENSE) 文件。
