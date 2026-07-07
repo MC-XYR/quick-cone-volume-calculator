@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="quick-cylinder-volume-calculator:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/quick_cylinder_volume_calculator_jar</output-path>
+    <root id="archive" name="quick-cylinder-volume-calculator.jar">
+      <element id="module-output" name="quick-cylinder-volume-calculator" />
+    </root>
+  </artifact>
+</component>

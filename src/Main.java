@@ -11,56 +11,62 @@ public class Main {
             lang = scanner.next();
         }
         boolean isChinese = lang.equalsIgnoreCase("ZH");
-        double r = 0.0;
-        if (isChinese) {
-            System.out.println("请输入圆锥底面半径：");
-        } else {
-            System.out.println("Please enter the base radius of the cone:");
-        }
-        if (scanner.hasNext()) {
-            String r1 = scanner.next();
-            r = Double.parseDouble(r1);
-        }
 
-        if (isChinese) {
-            System.out.println("半径是" + r);
-        } else {
-            System.out.println("Radius is " + r);
-        }
-        double h = 0.0;
-        if (isChinese) {
-            System.out.println("请输入圆锥的高：");
-        } else {
-            System.out.println("Please enter the height of the cone:");
-        }
-        if (scanner.hasNext()) {
-            String h1 = scanner.next();
-            h = Double.parseDouble(h1);
-        }
+        // 🔥【版本改动1】在这里加了一个无限循环
+        while (true) {
+            double r = 0.0;
+            if (isChinese) {
+                System.out.println("请输入圆锥底面半径：");
+            } else {
+                System.out.println("Please enter the base radius of the cone:");
+            }
+            if (scanner.hasNext()) {
+                String r1 = scanner.next();
+                r = Double.parseDouble(r1);
+            }
 
-        if (isChinese) {
-            System.out.println("高是：" + h);
-        } else {
-            System.out.println("Height is: " + h);
+            if (isChinese) {
+                System.out.println("半径是" + r);
+            } else {
+                System.out.println("Radius is " + r);
+            }
+
+            double h = 0.0;
+            if (isChinese) {
+                System.out.println("请输入圆锥的高：");
+            } else {
+                System.out.println("Please enter the height of the cone:");
+            }
+            if (scanner.hasNext()) {
+                String h1 = scanner.next();
+                h = Double.parseDouble(h1);
+            }
+
+            if (isChinese) {
+                System.out.println("高是：" + h);
+            } else {
+                System.out.println("Height is: " + h);
+            }
+
+            double p1 = r * r * h / 3.0;
+            if (isChinese) {
+                System.out.println("圆锥的体积是（保留π）：" + p1 + "π");
+            } else {
+                System.out.println("The volume of the cone is (keeping π): " + p1 + "π");
+            }
+            double p2 = r * r * 3.14 * h / 3.0;
+            if (isChinese) {
+                System.out.println("圆锥的体积是（π取3.14）：" + p2);
+            } else {
+                System.out.println("The volume of the cone is (π as 3.14): " + p2);
+            }
+            double p3 = r * r * 3.1415926535897932384626433 * h / 3.0;
+            if (isChinese) {
+                System.out.println("圆锥的体积是（π取小数点后25位）：" + p3);
+            } else {
+                System.out.println("The volume of the cone is (π to 25 decimal places): " + p3);
+            }
+            System.out.println("--------------------"); // 分隔线
         }
-        double p1 = r * r * h / 3.0;
-        if (isChinese) {
-            System.out.println("圆锥的体积是（保留π）：" + p1 + "π");
-        } else {
-            System.out.println("The volume of the cone is (keeping π): " + p1 + "π");
-        }
-        double p2 = r * r * 3.14 * h / 3.0;
-        if (isChinese) {
-            System.out.println("圆锥的体积是（π取3.14）：" + p2);
-        } else {
-            System.out.println("The volume of the cone is (π as 3.14): " + p2);
-        }
-        double p3 = r * r * 3.1415926535897932384626433 * h / 3.0;
-        if (isChinese) {
-            System.out.println("圆锥的体积是（π取小数点后25位）：" + p3);
-        } else {
-            System.out.println("The volume of the cone is (π to 25 decimal places): " + p3);
-        }
-        scanner.close();
     }
 }
