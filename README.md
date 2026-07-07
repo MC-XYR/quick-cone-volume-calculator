@@ -4,6 +4,8 @@ This can also serve as a little writing practice for me.
 
 However, this program can be tricky when you first start using it. You need to open cmd in the same directory, test the script, and once it works, save it as a .bat file for convenience.
 
+⚠️ Java 22 or above is required, but in theory, it supports environments with Java 8 or higher. ⚠️
+
 Here is an off-the-shelf cmd script. You need to open cmd and run it from the same directory:
 
 | Command | Description |
@@ -24,6 +26,8 @@ Chinese:
 这个计算器程序可以算是我的一个小练笔。
 
 但是这个程序第一次启动是困难的你需要在同级目录下打开cmd 写脚本没问题后写成.bat来运行
+
+⚠️需要java22及以上版本，但理论支持java8以上环境⚠️
 
 这是一个简易的cmd脚本
 | 命令 | 说明 |
